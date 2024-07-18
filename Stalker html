@@ -1,1 +1,140 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stalker to M3U Generator</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #2c3e50;
+    }
+    .form-container, .playlist-container {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+    }
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        color: #34495e;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus {
+        border-color: #3498db;
+        outline: none;
+    }
+    button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #2980b9;
+    }
+    .error {
+        color: #e74c3c;
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+        background-color: #fadbd8;
+        border-radius: 4px;
+    }
+    .success {
+        color: #27ae60;
+        margin-bottom: 1rem;
+        padding: 0.75rem;
+        background-color: #d4efdf;
+        border-radius: 4px;
+    }
+    .playlist-item {
+        background-color: #ecf0f1;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 4px;
+    }
+    .playlist-item a {
+        color: #2980b9;
+        text-decoration: none;
+    }
+    .playlist-item a:hover {
+        text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+        .container {
+            padding: 10px;
+        }
+        .form-container, .playlist-container {
+            padding: 1rem;
+        }
+    }
+</style>
+<style type="text/css">* {user-select: auto !important; -webkit-user-select: auto !important;}</style><input type="hidden" id="inject_idm_text_selection"></head>
+<body>
+<div class="container">
+    <h1>Stalker to M3U Generator</h1>
+    <div class="form-container">
+                        <form method="POST" action="">
+            <div class="form-group">
+                <label for="host">Host:</label>
+                <input type="text" id="host" name="host" required="" placeholder="http://example.com/stalker_portal/c/">
+            </div>
+            <div class="form-group">
+                <label for="mac">MAC Address:</label>
+                <input type="text" id="mac" name="mac" required="" placeholder="00:1A:79:00:00:00">
+            </div>
+            <div class="form-group">
+                <label for="serial">Serial Number: (serial cut)</label>
+                <input type="text" id="serial" name="serial">
+            </div>
+            <div class="form-group">
+                <label for="deviceid">Device ID:</label>
+                <input type="text" id="deviceid" name="deviceid">
+            </div>
+            <div class="form-group">
+                <label for="deviceid2">Device ID 2: (mostly device id1 is also used in device id2)</label>
+                <input type="text" id="deviceid2" name="deviceid2">
+            </div>
+            <div class="form-group">
+                <label for="signature">Signature:</label>
+                <input type="text" id="signature" name="signature">
+            </div>
+            <button type="submit">Generate M3U Playlist</button>
+        </form>
+    </div>
+    
+    </div>
 
+</body></html>
